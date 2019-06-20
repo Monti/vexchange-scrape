@@ -22,8 +22,6 @@ export default function({
     parseInt(expectedEthTokens) * ALLOWED_DEVIATION_FACTOR
   ).toString()
 
-  console.log({ tokenToScrape, minTokensBought, minEthBought, deadline })
-
   return marketContract.methods
     .token_scrape(tokenToScrape, minTokensBought, minEthBought, deadline)
     .send({ gas: 250000, gasPriceCoef: 0, from: sender })
