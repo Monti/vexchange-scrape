@@ -3,7 +3,7 @@ import { extend } from 'thorify/dist/extend'
 
 const Web3 = require('web3')
 
-export default function() {
+const getWeb3 = () => {
   let web3js
 
   if (typeof window.thor !== 'undefined') {
@@ -15,3 +15,5 @@ export default function() {
 
   return web3js
 }
+
+export default getWeb3
